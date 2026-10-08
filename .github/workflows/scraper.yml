@@ -47,7 +47,15 @@ jobs:
 
       - name: Lancer le scraper
         run: |
-          python scraper.py
+          if [ -f scraper.py ]; then
+            python scraper.py
+          elif [ -f main.py ]; then
+            python main.py
+          else
+            echo "Aucun point d'entrée trouvé (scraper.py ou main.py)." >&2
+            ls -la
+            exit 1
+          fi
 
       - name: Sauvegarder le CSV
         uses: actions/upload-artifact@v4
