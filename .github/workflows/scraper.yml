@@ -11,6 +11,12 @@ jobs:
       - name: Récupérer le projet
         uses: actions/checkout@v6
 
+      - name: Vérifier les fichiers
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 2 -type f | sort
+
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
@@ -22,11 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Installer les navigateurs Playwright
-        run: |
-          playwright install chromium
-          playwright install-deps chromium
-
       - name: Installer Node.js
         uses: actions/setup-node@v5
         with:
@@ -37,21 +38,32 @@ jobs:
         run: |
           npm install lighthouse
 
+      - name: Installer Google Chrome
+        uses: browser-actions/setup-chrome@v2
+        with:
+          chrome-version: stable
+
+      - name: Installer Chromium Playwright
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+
       - name: Vérifier les installations
         run: |
           python --version
           node --version
-          npm --version
           npx lighthouse --version
-          chromium --version || true
+          which google-chrome || true
 
       - name: Lancer le scraper
         run: |
-          python main.py
+          python "${{ github.workspace }}/main.py"
 
-      - name: Sauvegarder le CSV
+      - name: Sauvegarder les résultats
         uses: actions/upload-artifact@v4
         with:
-          name: resultat-scraping
-          path: audit_sites_lannion.csv
+          name: resultats-scraping
+          path: |
+            avec_site_lannion.csv
+            sans_site_lannion.csv
           if-no-files-found: warn
