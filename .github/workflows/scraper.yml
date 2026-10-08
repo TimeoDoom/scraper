@@ -57,7 +57,7 @@ jobs:
 
       - name: Lancer le scraper
         run: |
-          python "${{ github.workspace }}/main.py"
+          python "${{ github.workspace }}/scraper.py"
 
       - name: Sauvegarder les résultats
         uses: actions/upload-artifact@v4
