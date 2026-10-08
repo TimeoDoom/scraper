@@ -18,12 +18,160 @@ CITY = "Lannion"
 
 BUSINESS_TYPES = [
     # Bâtiment / Artisans
-    "Menuisier"
+    "Menuisier",
+    "Ébéniste",
+    "Plombier",
+    "Électricien",
+    "Peintre en bâtiment",
+    "Couvreur",
+    "Maçon",
+    "Carreleur",
+    "Plaquiste",
+    "Façadier",
+    "Serrurier",
+    "Vitrier",
+    "Chauffagiste",
+    "Frigoriste",
+    "Terrassier",
+    "Paysagiste",
+    "Jardinier",
+    "Élagage",
+    "Pisciniste",
+
+    # Automobile
+    "Garage automobile",
+    "Carrosserie",
+    "Contrôle technique",
+    "Auto-école",
+    "Lavage automobile",
+    "Location de véhicules",
+    "Réparation de pare-brise",
+    "Vente de pneus",
+    "Mécanicien moto",
+
+    # Commerces alimentaires
+    "Boulangerie",
+    "Pâtisserie",
+    "Boucherie",
+    "Charcuterie",
+    "Poissonnerie",
+    "Fromagerie",
+    "Primeur",
+    "Épicerie",
+    "Épicerie fine",
+    "Chocolatier",
+    "Caviste",
+    "Traiteur",
+
+    # Commerces
+    "Fleuriste",
+    "Cordonnier",
+    "Bijouterie",
+    "Librairie",
+    "Papeterie",
+    "Magasin de vêtements",
+    "Magasin de chaussures",
+    "Magasin de sport",
+    "Magasin de décoration",
+    "Magasin de meubles",
+    "Magasin bio",
+    "Animalerie",
+    "Opticien",
+
+    # Beauté / Bien-être
+    "Coiffeur",
+    "Barbier",
+    "Institut de beauté",
+    "Prothésiste ongulaire",
+    "Tatoueur",
+    "Salon de massage",
+    "Spa",
+    "Esthéticienne",
+    "Maquilleuse",
+
+    # Santé
+    "Ostéopathe",
+    "Kinésithérapeute",
+    "Psychologue",
+    "Naturopathe",
+    "Pédicure podologue",
+    "Orthophoniste",
+    "Diététicien",
+    "Sage-femme",
+    "Dentiste",
+    "Médecin généraliste",
+    "Audioprothésiste",
+
+    # Sport
+    "Salle de sport",
+    "Coach sportif",
+    "Club de tennis",
+    "Club de football",
+    "Club de yoga",
+    "Club de danse",
+    "Piscine",
+
+    # Restaurants / Hôtellerie
+    "Restaurant",
+    "Pizzeria",
+    "Crêperie",
+    "Snack",
+    "Fast food",
+    "Bar",
+    "Café",
+    "Salon de thé",
+    "Hôtel",
+    "Chambre d'hôtes",
+    "Camping",
+
+    # Services
+    "Dépannage informatique",
+    "Agence immobilière",
+    "Assureur",
+    "Courtier",
+    "Expert-comptable",
+    "Notaire",
+    "Avocat",
+    "Huissier",
+    "Photographe",
+    "Imprimerie",
+    "Graphiste",
+    "Traducteur",
+
+    # Services à domicile
+    "Ménage à domicile",
+    "Aide à domicile",
+    "Garde d'enfants",
+    "Soutien scolaire",
+    "Pet sitter",
+
+    # Industrie / Pro
+    "Métallerie",
+    "Usinage",
+    "Chaudronnerie",
+    "Mécanique industrielle",
+    "Fabrication industrielle",
+
+    # Événementiel
+    "DJ",
+    "Location de matériel",
+    "Wedding planner",
+    "Organisateur d'événements",
+
+    # Tourisme
+    "Office de tourisme",
+    "Location saisonnière",
+    "Excursion",
+    "Activités nautiques",
+
+    # Tech
+    "Agence de communication",
+    "Consultant informatique"
 ]
 
 
 # Nombre d'entreprises à analyser par secteur
-MAX_RESULTS_PER_TYPE = 3
+MAX_RESULTS_PER_TYPE = 80
 
 
 # Fichier final
