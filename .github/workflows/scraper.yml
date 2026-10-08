@@ -1,0 +1,57 @@
+name: Scraper Lannion
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le projet
+        uses: actions/checkout@v6
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Installer les dépendances Python
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Installer les navigateurs Playwright
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Installer Lighthouse
+        run: |
+          npm install lighthouse
+
+      - name: Vérifier les installations
+        run: |
+          python --version
+          node --version
+          npm --version
+          npx lighthouse --version
+          chromium --version || true
+
+      - name: Lancer le scraper
+        run: |
+          python scraper.py
+
+      - name: Sauvegarder le CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultat-scraping
+          path: audit_sites_lannion.csv
+          if-no-files-found: warn
