@@ -27,7 +27,6 @@ BUSINESS_TYPES = [
     "plombier chauffagiste",
     "électricien",
     "entreprise d'isolation",
-    "façadier",
     "entreprise de toiture",
     "entreprise de construction de maisons",
     "entreprise de terrassement",
@@ -47,19 +46,16 @@ BUSINESS_TYPES = [
     "chambre d'hôtes",
     "location de vacances",
     "hébergement insolite",
-    "camping indépendant",
-    "hôtel indépendant",
 
     # Automobile et nautisme
     "carrossier",
     "garage automobile indépendant",
     "spécialiste du detailing automobile",
     "réparateur de bateaux",
-    "chantier naval",
 ]
 
 # Nombre d'entreprises à analyser par secteur
-MAX_RESULTS_PER_TYPE = 50
+MAX_RESULTS_PER_TYPE = 40
 
 
 # Fichier final
