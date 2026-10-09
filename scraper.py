@@ -17,161 +17,49 @@ from playwright.async_api import async_playwright
 CITY = "Lannion"
 
 BUSINESS_TYPES = [
-    # Bâtiment / Artisans
-    "Menuisier",
-    "Ébéniste",
-    "Plombier",
-    "Électricien",
-    "Peintre en bâtiment",
-    "Couvreur",
-    "Maçon",
-    "Carreleur",
-    "Plaquiste",
-    "Façadier",
-    "Serrurier",
-    "Vitrier",
-    "Chauffagiste",
-    "Frigoriste",
-    "Terrassier",
-    "Paysagiste",
-    "Jardinier",
-    "Élagage",
-    "Pisciniste",
+    # Bâtiment et rénovation
+    "couvreur",
+    "entreprise de rénovation",
+    "entreprise de maçonnerie",
+    "menuisier",
+    "entreprise de menuiserie",
+    "installateur de fenêtres",
+    "plombier chauffagiste",
+    "électricien",
+    "entreprise d'isolation",
+    "façadier",
+    "entreprise de toiture",
+    "entreprise de construction de maisons",
+    "entreprise de terrassement",
 
-    # Automobile
-    "Garage automobile",
-    "Carrosserie",
-    "Contrôle technique",
-    "Auto-école",
-    "Lavage automobile",
-    "Location de véhicules",
-    "Réparation de pare-brise",
-    "Vente de pneus",
-    "Mécanicien moto",
+    # Aménagement extérieur
+    "paysagiste",
+    "élagueur",
+    "entreprise d'aménagement paysager",
+    "installateur de clôtures et portails",
+    "constructeur de terrasses",
+    "constructeur de piscines",
+    "entreprise d'aménagement extérieur",
+    "entreprise de nettoyage de toiture",
 
-    # Commerces alimentaires
-    "Boulangerie",
-    "Pâtisserie",
-    "Boucherie",
-    "Charcuterie",
-    "Poissonnerie",
-    "Fromagerie",
-    "Primeur",
-    "Épicerie",
-    "Épicerie fine",
-    "Chocolatier",
-    "Caviste",
-    "Traiteur",
+    # Hébergement touristique
+    "gîte",
+    "chambre d'hôtes",
+    "location de vacances",
+    "hébergement insolite",
+    "camping indépendant",
+    "hôtel indépendant",
 
-    # Commerces
-    "Fleuriste",
-    "Cordonnier",
-    "Bijouterie",
-    "Librairie",
-    "Papeterie",
-    "Magasin de vêtements",
-    "Magasin de chaussures",
-    "Magasin de sport",
-    "Magasin de décoration",
-    "Magasin de meubles",
-    "Magasin bio",
-    "Animalerie",
-    "Opticien",
-
-    # Beauté / Bien-être
-    "Coiffeur",
-    "Barbier",
-    "Institut de beauté",
-    "Prothésiste ongulaire",
-    "Tatoueur",
-    "Salon de massage",
-    "Spa",
-    "Esthéticienne",
-    "Maquilleuse",
-
-    # Santé
-    "Ostéopathe",
-    "Kinésithérapeute",
-    "Psychologue",
-    "Naturopathe",
-    "Pédicure podologue",
-    "Orthophoniste",
-    "Diététicien",
-    "Sage-femme",
-    "Dentiste",
-    "Médecin généraliste",
-    "Audioprothésiste",
-
-    # Sport
-    "Salle de sport",
-    "Coach sportif",
-    "Club de tennis",
-    "Club de football",
-    "Club de yoga",
-    "Club de danse",
-    "Piscine",
-
-    # Restaurants / Hôtellerie
-    "Restaurant",
-    "Pizzeria",
-    "Crêperie",
-    "Snack",
-    "Fast food",
-    "Bar",
-    "Café",
-    "Salon de thé",
-    "Hôtel",
-    "Chambre d'hôtes",
-    "Camping",
-
-    # Services
-    "Dépannage informatique",
-    "Agence immobilière",
-    "Assureur",
-    "Courtier",
-    "Expert-comptable",
-    "Notaire",
-    "Avocat",
-    "Huissier",
-    "Photographe",
-    "Imprimerie",
-    "Graphiste",
-    "Traducteur",
-
-    # Services à domicile
-    "Ménage à domicile",
-    "Aide à domicile",
-    "Garde d'enfants",
-    "Soutien scolaire",
-    "Pet sitter",
-
-    # Industrie / Pro
-    "Métallerie",
-    "Usinage",
-    "Chaudronnerie",
-    "Mécanique industrielle",
-    "Fabrication industrielle",
-
-    # Événementiel
-    "DJ",
-    "Location de matériel",
-    "Wedding planner",
-    "Organisateur d'événements",
-
-    # Tourisme
-    "Office de tourisme",
-    "Location saisonnière",
-    "Excursion",
-    "Activités nautiques",
-
-    # Tech
-    "Agence de communication",
-    "Consultant informatique"
+    # Automobile et nautisme
+    "carrossier",
+    "garage automobile indépendant",
+    "spécialiste du detailing automobile",
+    "réparateur de bateaux",
+    "chantier naval",
 ]
 
-
 # Nombre d'entreprises à analyser par secteur
-MAX_RESULTS_PER_TYPE = 80
+MAX_RESULTS_PER_TYPE = 50
 
 
 # Fichier final
